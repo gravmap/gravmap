@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravmap - AI-Powered Real Estate Transaction Management</title>
+    <meta name="description" content="Never miss a deadline again. Upload contracts, let AI extract dates, track deadlines automatically.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        nav { padding: 20px 0; border-bottom: 1px solid #222; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 700; color: #fff; text-decoration: none; }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a { color: #888; text-decoration: none; font-size: 14px; }
+        .nav-links a:hover { color: #fff; }
+        .btn { background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .btn:hover { background: #eee; }
+        
+        .hero { padding: 120px 0 80px; text-align: center; }
+        .hero h1 { font-size: 64px; font-weight: 700; line-height: 1.1; margin-bottom: 24px; }
+        .hero h1 span { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 20px; color: #888; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; }
+        .btn-outline { background: transparent; border: 1px solid #333; color: #fff; }
+        .btn-outline:hover { background: #111; }
+        
+        .features { padding: 80px 0; background: #111; }
+        .features h2 { text-align: center; font-size: 40px; margin-bottom: 60px; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .feature-card { background: #1a1a1a; padding: 32px; border-radius: 16px; border: 1px solid #222; }
+        .feature-card .icon { font-size: 40px; margin-bottom: 20px; }
+        .feature-card h3 { font-size: 20px; margin-bottom: 12px; }
+        .feature-card p { color: #888; line-height: 1.6; }
+        
+        .how-it-works { padding: 80px 0; }
+        .how-it-works h2 { text-align: center; font-size: 40px; margin-bottom: 60px; }
+        .steps { display: flex; gap: 40px; justify-content: center; }
+        .step { text-align: center; flex: 1; max-width: 280px; }
+        .step-number { width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; margin: 0 auto 20px; }
+        .step h3 { font-size: 18px; margin-bottom: 12px; }
+        .step p { color: #888; font-size: 14px; line-height: 1.6; }
+        
+        .pricing { padding: 80px 0; background: #111; }
+        .pricing h2 { text-align: center; font-size: 40px; margin-bottom: 20px; }
+        .pricing > .container > p { text-align: center; color: #888; margin-bottom: 60px; }
+        .pricing-cards { display: flex; gap: 32px; justify-content: center; }
+        .pricing-card { background: #1a1a1a; padding: 40px; border-radius: 16px; border: 1px solid #222; text-align: center; flex: 1; max-width: 360px; }
+        .pricing-card.featured { border-color: #667eea; transform: scale(1.05); }
+        .pricing-card h3 { font-size: 24px; margin-bottom: 12px; }
+        .pricing-card .price { font-size: 48px; font-weight: 700; margin-bottom: 8px; }
+        .pricing-card .price span { font-size: 16px; color: #888; }
+        .pricing-card .desc { color: #888; margin-bottom: 32px; }
+        .pricing-card ul { list-style: none; text-align: left; margin-bottom: 32px; }
+        .pricing-card li { padding: 12px 0; border-bottom: 1px solid #222; display: flex; align-items: center; gap: 12px; }
+        .pricing-card li:last-child { border-bottom: none; }
+        
+        .cta { padding: 100px 0; text-align: center; }
+        .cta h2 { font-size: 40px; margin-bottom: 20px; }
+        .cta p { color: #888; margin-bottom: 40px; font-size: 18px; }
+        
+        footer { padding: 40px 0; border-top: 1px solid #222; text-align: center; color: #666; font-size: 14px; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .steps { flex-direction: column; align-items: center; }
+            .pricing-cards { flex-direction: column; }
+            .pricing-card.featured { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Gravmap</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Never miss a deadline<br><span>again.</span></h1>
+            <p>Upload your real estate contracts and let AI extract all the important dates automatically. Track deadlines, get reminders, and close deals on time.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn">Start Free Trial</a>
+                <a href="#" class="btn btn-outline">Watch Demo</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Everything you need to close on time</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h3>AI Contract Extraction</h3>
+                    <p>Upload PDFs and automatically extract dates, parties, and deadlines. No manual data entry.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📅</div>
+                    <h3>Smart Timeline</h3>
+                    <p>Visual timeline of all your transaction deadlines. See what's coming up at a glance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔔</div>
+                    <h3>Intelligent Reminders</h3>
+                    <p>Email reminders at 7, 3, and 1 day before deadlines. Never let something slip through.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Dashboard Overview</h3>
+                    <p>See all your transactions and upcoming deadlines in one place.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📱</div>
+                    <h3>Mobile Responsive</h3>
+                    <p>Works great on desktop and mobile. Check deadlines on the go.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>Bank-level encryption for your documents. Your data stays yours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload Contract</h3>
+                    <p>Drag and drop your PDF contract. We support all major formats.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Extracts Dates</h3>
+                    <p>Our AI reads the contract and extracts all key dates and parties.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Review & Confirm</h3>
+                    <p>Quickly review extracted data and make any adjustments.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Reminders</h3>
+                    <p>Receive automatic email reminders before each deadline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Simple, transparent pricing</h2>
+            <p>Start free, upgrade when you need more</p>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0<span>/mo</span></div>
+                    <p class="desc">Perfect for trying out</p>
+                    <ul>
+                        <li>✓ 1 active transaction</li>
+                        <li>✓ AI contract extraction</li>
+                        <li>✓ Timeline view</li>
+                        <li>✓ Email reminders</li>
+                    </ul>
+                    <a href="#" class="btn" style="display:block;width:100%;">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pro</h3>
+                    <div class="price">$49<span>/mo</span></div>
+                    <p class="desc">For busy agents</p>
+                    <ul>
+                        <li>✓ Unlimited transactions</li>
+                        <li>✓ Priority AI processing</li>
+                        <li>✓ Team sharing</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Custom reminders</li>
+                    </ul>
+                    <a href="#" class="btn" style="display:block;width:100%;">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to never miss a deadline?</h2>
+            <p>Join real estate agents who trust Gravmap to keep their deals on track.</p>
+            <a href="#" class="btn">Start Your Free Trial</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gravmap. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
